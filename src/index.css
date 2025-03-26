@@ -1,0 +1,79 @@
+/* Tailwind's base styles (imported by default in Vite projects) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans; /* This applies the global font you've configured in tailwind.config.js */
+  }
+}
+
+@keyframes starAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.group:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.slider-list {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.CertTheme__paragraph {
+  @apply text-greyscale-1 mb-4 leading-relaxed;
+}
+
+.CertTheme__h4 {
+  @apply text-xl font-semibold mt-6 mb-4 text-greyscale-main;
+}
+
+.CertTheme__ul {
+  @apply list-disc pl-6 space-y-2;
+}
+
+.CertTheme__listItem {
+  @apply text-greyscale-2 leading-relaxed;
+}
+
+/* Slider transitions */
+.slider-list {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Triangle indicator */
+.triangle-indicator {
+  @apply absolute z-10 -translate-x-1/2 -top-spacing14 w-0 h-0 border-x-[13px] border-b-[14px] md:border-x-[16px] md:border-b-[16px] border-x-transparent border-b-greyscale-white;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
