@@ -36,7 +36,7 @@ import CourseFAQs from "./Sections/CourseFAQs";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import MasterDM from "./Pages/Courses/MasterDM";
-import Breadcrumb from "./CourseComponents/BreadCrumb/BreadCrumb";
+import Breadcrumb from "./CourseComponents/BreadCrumb/Breadcrumb";
 import CourseCard from "./CourseComponents/CourseCard/CourseCard";
 import ProgramOverview from "./CourseComponents/ProgramOverview/ProgramOverview";
 import ProgramIntroduction from "./CourseComponents/ProgramIntroduction/ProgramIntroduction";
