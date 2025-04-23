@@ -13,6 +13,7 @@ const ProjectsSection = lazy(()=>import("../../CourseComponents/ProjectSection/P
 const YtVideo =lazy(()=>import("../../Container/YtVIdeo"));
 const CurriculumSection = lazy(()=>import("../../CourseComponents/CurriculumSection/CurriculumSection"))
 const TabSection = lazy(()=>import("../../CourseComponents/DigitalMarketingTabSection/TabSection"))
+const OPJAlumniTestimonials = lazy(()=>import("../../CourseComponents/OPJAluminiTestimonials/OPJAluminiTestimonials"))
 
 const faqs = [
   {
@@ -626,6 +627,7 @@ curriculumContent={customContent} />
       <StudentsPlacedAt />
       <YtVideo/>
       <ProjectsSection />
+      <OPJAlumniTestimonials/>
       <CardSection cardData={cards} />
       <DownloadButton/>
       <FAQsSection
