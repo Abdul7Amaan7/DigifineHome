@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
-// Card Component
+// ✅ Reusable Card Component
 const Card = React.memo(({ imageSrc, title, description }) => {
-  // Manage hover state
   const [isHovered, setIsHovered] = useState(false);
 
-  // Hover style for the card
   const hoverStyle = {
-    backgroundColor: 'rgba(255, 255, 255, 0.0)', // transparent white
+    backgroundColor: 'rgba(255, 255, 255, 0.0)',
     backgroundImage: 'linear-gradient(45deg, #000000 40%, #429AFF 100%)',
   };
 
-  // Text color change on hover
   const textHoverStyle = isHovered ? { color: 'white' } : {};
 
   return (
@@ -21,54 +19,39 @@ const Card = React.memo(({ imageSrc, title, description }) => {
       style={isHovered ? hoverStyle : {}}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      initial={{ opacity: 0, scale: 0.95 }} // Initial state for fade and scale effect
-      animate={{ opacity: 1, scale: 1 }} // Fade in and scale to normal
-      transition={{ duration: 0.1, delay: 0 }} // Smooth transition for individual cards
-      whileHover={{ scale: 1.1 }} // Scale the card when hovered
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.1 }}
+      whileHover={{ scale: 1.1 }}
     >
-      {/* Native Lazy Load Image */}
       <img
         src={imageSrc}
         alt={title}
-        loading="lazy" // Native lazy loading for images
+        loading="lazy"
         className="w-[35%] object-cover rounded-t-lg mb-4"
       />
       <div className="p-4 flex flex-col justify-center items-center space-y-2">
-        <h3 className="text-xl font-semibold text-gray-900 text-center" style={textHoverStyle}>{title}</h3>
-        <p className="text-gray-700 text-center" style={textHoverStyle}>{description}</p>
+        <h3 className="text-xl font-semibold text-gray-900 text-center" style={textHoverStyle}>
+          {title}
+        </h3>
+        <p className="text-gray-700 text-center" style={textHoverStyle}>
+          {description}
+        </p>
       </div>
     </motion.div>
   );
 });
 
-// CardSection Component
-const CardSection = () => {
+Card.propTypes = {
+  imageSrc: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
+
+// ✅ CardSection Component
+const CardSection = ({ cardData = [], title = "Steps towards success with Digifine" }) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const cardData = [
-    {
-      imageSrc: "/images/Icons/mentorship.webp",
-      title: "1. Get Trained",
-      description: "Acquire key digital marketing skills from highly experienced trainers through a practical training approach!",
-    },
-    {
-      imageSrc: "/images/Icons/goal.webp",
-      title: "2. Assessments",
-      description: "Solve real-world case studies, get global industry exposure and work on challenging projects!",
-    },
-    {
-      imageSrc: "/images/Icons/job-interview.webp",
-      title: "3. Mock Interview",
-      description: "Become job-ready with the right confidence, knowledge and etiquette with our panel of interviewers!",
-    },
-    {
-      imageSrc: "/images/Icons/check-list.webp ",
-      title: "4. Get Placed",
-      description: "Secure your career with 100% placement guarantee at top digital marketing companies in India and abroad!",
-    },
-  ];
-
-  // Check if the section is in the viewport
   useEffect(() => {
     const handleScroll = () => {
       const section = document.getElementById('card-section');
@@ -79,7 +62,7 @@ const CardSection = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check visibility on page load as well
+    handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -92,14 +75,14 @@ const CardSection = () => {
       id="card-section"
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
-      transition={{ duration: 1 }} // Fade in the entire section
+      transition={{ duration: 1 }}
     >
-      {/* Main Title */}
+      {/* Dynamic Title */}
       <h2 className="text-3xl font-semibold mb-10 text-gray-900 text-left inline-block rounded-full outline outline-1 outline-blue-500 px-4 py-2 max-w-3xl">
-       Steps towards success with Digifine
+        {title}
       </h2>
 
-      {/* Card Grid with improved background and padding */}
+      {/* Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 bg-custom-bg-div p-6 rounded-lg">
         {cardData.map((card, index) => (
           <Card
@@ -112,6 +95,18 @@ const CardSection = () => {
       </div>
     </motion.div>
   );
+};
+
+// ✅ Prop validation
+CardSection.propTypes = {
+  cardData: PropTypes.arrayOf(
+    PropTypes.shape({
+      imageSrc: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ),
+  title: PropTypes.string,
 };
 
 export default CardSection;

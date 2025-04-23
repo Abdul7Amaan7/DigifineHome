@@ -48,6 +48,8 @@ import HandsOnDataProgram from "./CourseComponents/HandsOnDataProgram/HandsOnDat
 import StudentsPlacedAt from "./CourseComponents/StudentPlacedAt/StudentsPlacedAt";
 import ProjectsSection from "./CourseComponents/ProjectSection/ProjectsSection";
 import FAQsSection from "./CourseComponents/FAQsSection/FAQsSection";
+import OPJAlumniTestimonials from "./CourseComponents/OPJAluminiTestimonials/OPJAluminiTestimonials";
+import TabSection from "./CourseComponents/DigitalMarketingTabSection/TabSection";
 
 export {
     Header,
@@ -100,4 +102,6 @@ export {
     StudentsPlacedAt,
     ProjectsSection,
     FAQsSection,
+    OPJAlumniTestimonials,
+    TabSection,
 }

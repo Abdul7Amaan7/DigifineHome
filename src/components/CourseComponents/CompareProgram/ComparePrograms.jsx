@@ -2,8 +2,8 @@ import React from "react";
 
 const ComparePrograms = ({
   title = "How Our Program Compares",
-  subtitlePart1 = "Why Is Our Program The",
-  subtitleHighlight = "Best In The Market?",
+  subtitlePart1 = "Why Is Digifine's",
+  subtitleHighlight = "PG Digital Marketing is Best?",
   upGradFeatures = [
     "12-month accelerated program to get you job-ready faster",
     "500+ hours of comprehensive learning, including live sessions and recorded content.",
@@ -50,9 +50,9 @@ const ComparePrograms = ({
           {/* Comparison Cards */}
           <div className="flex justify-start items-start w-full relative md:mt-12">
             {/* upGrad Card */}
-            <div className="flex flex-col justify-start items-start flex-grow overflow-hidden rounded-3xl bg-white border border-primary-main">
+            <div className="flex flex-col max-w-[60%] justify-start items-start flex-grow overflow-hidden rounded-3xl bg-white border border-primary-main">
               <div className="flex justify-center items-center self-stretch h-20 relative overflow-hidden px-4 py-5 border-b border-greyscale-6 w-full rounded-t-3xl">
-                <p className="text-xl font-medium text-left text-primary-main">upGrad</p>
+                <p className="text-xl font-bold tracking-wide text-left text-primary-main">DIGIFINE</p>
               </div>
               {upGradFeatures.map((feature, index) => (
                 <div

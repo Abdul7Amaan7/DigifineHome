@@ -133,6 +133,7 @@ const CertificateSection = ({
   title = "Master's degree in AI & DS, JGU",
   subtitlePart1 = "Earn Your Valuable",
   subtitleHighlight = "Master's Degree and Recognition",
+  paragraph = "Earn over 10 globally recognized & international certifications after course completion",
   certificates = [
     {
       id: 1,
@@ -161,6 +162,7 @@ const CertificateSection = ({
               {subtitlePart1} <span className="text-primary-main">{subtitleHighlight}</span>
             </p>
           </div>
+          <p className="text-sm text-greyscale-2 mt-3">{paragraph}</p>
         </div>
 
         {/* Certificate Carousel */}

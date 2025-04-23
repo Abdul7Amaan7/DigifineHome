@@ -149,19 +149,19 @@ const CourseCard = ({
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:flex md:gap-14 gap-4 mb-6 md:mb-0">
             <div>
-              <p className="text-xs md:text-sm text-gray-500 mb-1">EMI</p>
+              <p className="text-xs md:text-sm text-gray-500 mb-1">100% Assured</p>
               <p className="text-xl md:text-2xl font-medium bg-gradient-to-r from-[#046AED] to-[#0BABCE] bg-clip-text text-transparent">
                 {emi}
               </p>
             </div>
             <div>
-              <p className="text-xs md:text-sm text-gray-500 mb-1">Start Date</p>
+              <p className="text-xs md:text-sm text-gray-500 mb-1">Trained by</p>
               <p className="text-xl md:text-2xl font-medium bg-gradient-to-r from-[#046AED] to-[#0BABCE] bg-clip-text text-transparent">
                 {startDate}
               </p>
             </div>
             <div className="col-span-2 md:col-auto">
-              <p className="text-xs md:text-sm text-gray-500 mb-1">Duration</p>
+              <p className="text-xs md:text-sm text-gray-500 mb-1">One-of-its kind</p>
               <p className="text-xl md:text-2xl font-medium bg-gradient-to-r from-[#046AED] to-[#0BABCE] bg-clip-text text-transparent">
                 {duration}
               </p>
@@ -186,7 +186,7 @@ const CourseCard = ({
 
           <div className="flex items-center gap-2 text-gray-600 mt-2">
             <i className="ri-phone-line text-sm md:text-base"></i>
-            <span className="text-xs md:text-sm">For enquiries call: {contactNumber}</span>
+            {/* <span className="text-xs md:text-sm">For enquiries call: {contactNumber}</span> */}
           </div>
         </div>
       </div>
