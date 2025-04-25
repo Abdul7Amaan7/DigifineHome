@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import Layout from './Layout.jsx';
-import { Home, About, MasterDM } from './components/index.js';
+import { Home, About, MasterDM , MBA } from './components/index.js';
 
 const router = createBrowserRouter([
   {
@@ -18,8 +18,12 @@ const router = createBrowserRouter([
         path: 'about',
         element: <About />
       },{
-        path:'courses/MasterDM',
+        path:'courses/digitalmarketing/pgdm',
         element:<MasterDM/>
+      },
+      {
+        path:'courses/digitalmarketing/mba',
+        element:<MBA/>
       }
     ]
   }

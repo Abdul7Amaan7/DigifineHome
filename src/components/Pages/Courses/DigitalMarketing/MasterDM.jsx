@@ -1,19 +1,19 @@
 import {react,lazy} from 'react'
 import {Breadcrumb,CourseCard,ProgramOverview,ProgramIntroduction,MyComponent,DownloadButton,ComparePrograms,
   CompaniesCarousel,CertificateSection,CardSection,
-} from '../../index'
+} from '../../../index'
 
 import { AcademicCapIcon, CodeIcon, ChartBarIcon } from '@heroicons/react/solid'; // Example for heroicons
 
 
-const StudentsPlacedAt = lazy(() => import("../../CourseComponents/StudentPlacedAt/StudentsPlacedAt"));
-const HandsOnDataProgram = lazy(() => import("../../CourseComponents/HandsOnDataProgram/HandsOnDataProgram"));
-const FAQsSection = lazy(() => import("../../CourseComponents/FAQsSection/FAQsSection"));
-const ProjectsSection = lazy(()=>import("../../CourseComponents/ProjectSection/ProjectsSection"));
-const YtVideo =lazy(()=>import("../../Container/YtVIdeo"));
-const CurriculumSection = lazy(()=>import("../../CourseComponents/CurriculumSection/CurriculumSection"))
-const TabSection = lazy(()=>import("../../CourseComponents/DigitalMarketingTabSection/TabSection"))
-const OPJAlumniTestimonials = lazy(()=>import("../../CourseComponents/OPJAluminiTestimonials/OPJAluminiTestimonials"))
+const StudentsPlacedAt = lazy(() => import("../../../CourseComponents/StudentPlacedAt/StudentsPlacedAt"));
+const HandsOnDataProgram = lazy(() => import("../../../CourseComponents/HandsOnDataProgram/HandsOnDataProgram"));
+const FAQsSection = lazy(() => import("../../../CourseComponents/FAQsSection/FAQsSection"));
+const ProjectsSection = lazy(()=>import("../../../CourseComponents/ProjectSection/ProjectsSection"));
+const YtVideo =lazy(()=>import("../../../Container/YtVIdeo"));
+const CurriculumSection = lazy(()=>import("../../../CourseComponents/CurriculumSection/CurriculumSection"))
+const TabSection = lazy(()=>import("../../../CourseComponents/DigitalMarketingTabSection/TabSection"))
+const OPJAlumniTestimonials = lazy(()=>import("../../../CourseComponents/OPJAluminiTestimonials/OPJAluminiTestimonials"))
 
 const faqs = [
   {

@@ -123,7 +123,8 @@ const TabSection = ({
             className={`${activeTab === index + 1 ? 'block' : 'hidden'} animate-fadeIn`}
           >
             <div className="prose max-w-none">
-              <p className="text-gray-700 mb-8 leading-relaxed">{tab.content}</p>
+              <p className="text-gray-700 mb-8 leading-relaxed" 
+              style={{whiteSpace: 'pre-line', lineHeight: '2'}}>{tab.content}</p>
               
               <div className="flex flex-wrap gap-4 mt-8">
                 {tab.buttons?.map((button, btnIndex) => (

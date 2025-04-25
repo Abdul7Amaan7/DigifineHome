@@ -38,13 +38,45 @@ const navCourses = [
     ]
   },
   { 
+    name: 'Navi Mumbai',
+    slug: '',
+    children: [
+      { 
+        name: 'Digital Marketing',
+        slug: '',
+        children: [
+          { name: 'MBA in Digital Marketing', slug: '/courses/digitalmarketing/mba' },
+          { name: 'PG in Digital Marketing', slug: '/courses/digitalmarketing/pgdm' },
+          { name: 'Executive Program', slug: '/courses/executive-dm' },
+        ]
+      },
+      { 
+        name: 'Graphic Design',
+        slug: '',
+        children: [
+          { name: 'Advanced Graphic Design', slug: '/courses/advanced-gd' },
+          { name: 'Diploma in Graphic Design', slug: '/courses/diploma-gd' },
+        ]
+      },
+      { 
+        name: 'IT Courses',
+        slug: '',
+        children: [
+          { name: 'Full Stack Development', slug: '/courses/full-stack' },
+          { name: 'Data Science', slug: '/courses/data-science' },
+          { name: 'Cloud Computing', slug: '/courses/cloud-computing' },
+        ]
+      },
+    ]
+  },
+  { 
     name: 'Pune',
     slug: '',
     children: [
       { name: 'Programming Fundamentals', slug: '/courses/programming' },
       { name: 'UI/UX Design', slug: '/courses/ui-ux' },
     ]
-  }
+  },
 ];
 
 // Explore Courses (Category-based)

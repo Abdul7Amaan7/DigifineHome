@@ -35,7 +35,6 @@ import BoxCardSection from "./Sections/BoxCardSection";
 import CourseFAQs from "./Sections/CourseFAQs";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
-import MasterDM from "./Pages/Courses/MasterDM";
 import Breadcrumb from "./CourseComponents/BreadCrumb/Breadcrumb";
 import CourseCard from "./CourseComponents/CourseCard/CourseCard";
 import ProgramOverview from "./CourseComponents/ProgramOverview/ProgramOverview";
@@ -50,6 +49,8 @@ import ProjectsSection from "./CourseComponents/ProjectSection/ProjectsSection";
 import FAQsSection from "./CourseComponents/FAQsSection/FAQsSection";
 import OPJAlumniTestimonials from "./CourseComponents/OPJAluminiTestimonials/OPJAluminiTestimonials";
 import TabSection from "./CourseComponents/DigitalMarketingTabSection/TabSection";
+import MBA from "./Pages/Courses/DigitalMarketing/MBA.jsx";
+import MasterDM from "./Pages/Courses/DigitalMarketing/MasterDM.jsx";
 
 export {
     Header,
@@ -104,4 +105,5 @@ export {
     FAQsSection,
     OPJAlumniTestimonials,
     TabSection,
+    MBA,
 }

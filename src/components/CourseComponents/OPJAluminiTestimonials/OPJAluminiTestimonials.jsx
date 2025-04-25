@@ -82,7 +82,7 @@ const TestimonialCard = ({ testimonial }) => {
   );
 };
 
-const OPJAlumniTestimonials = () => {
+const OPJAlumniTestimonials = ({paragraph}) => {
   const testimonials = [
     {
       id: 1,
@@ -159,6 +159,9 @@ const OPJAlumniTestimonials = () => {
             Our Student <span className="text-primary-main">Testimonials</span>
           </p>
         </div>
+        <p className="mt-3">
+          {paragraph}
+        </p>
       </div>
 
       <div className="carousel-wrapper pt-9 md:pt-12 relative overflow-hidden">
