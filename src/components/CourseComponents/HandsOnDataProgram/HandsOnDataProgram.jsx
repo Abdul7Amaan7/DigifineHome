@@ -119,7 +119,7 @@ const HandsOnDataProgram = ({
   imageAlt = "Tools Logo Collage",
 }) => {
   return (
-    <section id="Most-Hands-on-Data-Program" className="sm:my-10 ">
+    <section id="Most-Hands-on-Data-Program" className="sm:my-10 px-6 md:px-0 mt-10">
       <div className="flex flex-col xs:px-5 max-w-6xl w-full mx-auto md:my-40 sm:my-0 xs:gap-9 md:gap-12">
         {/* Header Section */}
         <div className="flex flex-col justify-start items-start relative md:gap-0 xs:gap-2 w-full">

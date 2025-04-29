@@ -680,7 +680,7 @@ subtitleHighlight="100% Placement Guarantee"
 <DownloadButton/>
 <CurriculumSection 
 title="Syllabus of Digifine PG in Digital Marketing Course in Vashi, Navi Mumbai" 
-subtitlePart1="PG in Digital Marketing Course Syallbus For"
+subtitlePart1="MBA in Digital Marketing Course Syallbus For"
 subtitleHighlight="Vashi, Navi Mumbai" 
 tabTitlePattern={(index) => ["Digital Marketing", "Google Ads", "Social Media Marketing","Email Marketing","Online Reputation Management","Search Engine Optimization","Google Analytics","Contetn Marketing/Ad Scripting","Whatsapp Marketing","Landing Page Technique","Influencer Marketing","Mobile Marketing","Word Press","HTML & CSS","Programmtic Media Buying","Strategic Management","Brand Management","E-commerce Management","OTT Ads","BARC","Luxury Brand Management"][index]}
 curriculumContent={customContent} />  

@@ -140,7 +140,7 @@ const ComparePrograms = ({
 }) => {
   return (
     <section id="Compare-Programs" className="overflow-hidden">
-      <div className="flex flex-col xs:px-4 xs:py-8 max-w-6xl w-full mx-auto md:px-12 md:my-spacing20 mt-16">
+      <div className="flex flex-col xs:px-4 xs:py-8 max-w-6xl w-full mx-auto px-6 md:px-0 md:my-spacing20 mt-16">
         {/* Header Section */}
         <div className="flex flex-col justify-start items-start w-full md:gap-0 xs:gap-2 mb-6 md:mb-8">
           <h2 className="font-semibold text-left text-sm text-greyscale-1 md:tracking-tight xs:tracking-tight md:mb-2">

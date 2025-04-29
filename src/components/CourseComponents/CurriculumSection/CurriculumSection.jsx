@@ -70,7 +70,7 @@ const CurriculumSection = ({
 
   return (
     <section id="Curriculum" className="relative">
-      <div className="flex flex-col xs:px-5 xs:my-10 max-w-6xl w-full mx-auto md:px-12 md:my-10 md:!gap-8 xs:!gap-9">
+      <div className="flex flex-col xs:px-5 xs:my-10 max-w-6xl w-full mx-auto md:my-10 md:!gap-8 xs:!gap-9  px-6 md:px-0">
 
         {/* Header */}
         <div className="flex flex-col justify-start items-start md:gap-0 xs:gap-2">

@@ -57,7 +57,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="Projects">
-      <div className="flex flex-col xs:px-spacing20 xs:my-spacing40 max-w-6xl w-full mx-auto md:px-spacing100 mt-20 mb-14">
+      <div className="flex flex-col xs:px-spacing20 xs:my-spacing40 max-w-6xl w-full mx-auto md:px-spacing100 mt-20 mb-14 px-6 md:px-0">
         {/* Header Section - Made responsive without changing desktop */}
         <div className="flex flex-col justify-start items-start relative md:gap-0 xs:gap-spacing8 max-w-730px">
           <h2 className="font-semibold text-center text-sm text-title-all-caps-normal text-greyscale-1 md:-tracking-0.14 xs:-tracking-0.122 md:mb-spacing2 whitespace-nowrap capitalize">

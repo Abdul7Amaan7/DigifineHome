@@ -94,7 +94,7 @@ const ProgramOverview = ({
   };
 
   return (
-    <section className="md:max-w-1440 md:m-auto px-spacing2">
+    <section className="md:max-w-1440 md:m-auto px-6 md:px-0">
       <div className="flex flex-col xs:px-spacing2 xs:my-spacing4 max-w-1440 max-w-6xl w-full mx-auto md:my-spacing16 rounded-2xl bg-greyscale-white shadow-custom xs:shadow-lg md:py-spacing8 md:px-spacing24 md:rounded-16 rounded-10 px-spacing2 py-3">
         {/* Title Section */}
         <div className="flex flex-col justify-start items-start relative md:gap-0 xs:gap-spacing8">

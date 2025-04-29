@@ -154,7 +154,7 @@ const FAQsSection = ({ faqData = [], sectionTitle = "Frequently Asked Questions"
 
   return (
     <section id="FAQs">
-      <div className="flex flex-col xs:px-spacing20 max-w-6xl w-full mx-auto md:px-spacing205 py-28">
+      <div className="flex flex-col xs:px-spacing20 max-w-6xl w-full mx-auto md:px-spacing205 py-28 px-6 md:px-0">
         {/* Section Header */}
         <div className="flex flex-col justify-start items-start relative md:gap-0 xs:gap-spacing8">
           <div className="relative items-start justify-start flex-grow-0 flex-shrink-0 gap-spacing8">
