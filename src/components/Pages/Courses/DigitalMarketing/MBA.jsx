@@ -443,7 +443,7 @@ const cards = [
   ];
 
 
-  const customUpGradFeatures = [
+  const customDigifineFeatures = [
     "✅ 100% Placement Guarantee",
     "✅ Guaranteed extensions and salary hikes",
     "✅ In-hand Offer Letter on the 1st day of admission",
@@ -685,7 +685,7 @@ subtitleHighlight="Vashi, Navi Mumbai"
 tabTitlePattern={(index) => ["Digital Marketing", "Google Ads", "Social Media Marketing","Email Marketing","Online Reputation Management","Search Engine Optimization","Google Analytics","Contetn Marketing/Ad Scripting","Whatsapp Marketing","Landing Page Technique","Influencer Marketing","Mobile Marketing","Word Press","HTML & CSS","Programmtic Media Buying","Strategic Management","Brand Management","E-commerce Management","OTT Ads","BARC","Luxury Brand Management"][index]}
 curriculumContent={customContent} />  
 <ComparePrograms
-        upGradFeatures={customUpGradFeatures}
+        upGradFeatures={customDigifineFeatures}
         otherCoursesFeatures={customOtherCoursesFeatures}
         button1Text="Download Syllabus"
         button2Text="Apply Now"

@@ -1,3 +1,4 @@
+
 // import React from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, Autoplay } from "swiper/modules";
@@ -38,7 +39,7 @@
 //           <Swiper
 //             modules={[Navigation, Autoplay]}
 //             spaceBetween={30}
-//             slidesPerView={3}
+//             slidesPerView={3} // Default for large screens
 //             navigation={{
 //               prevEl: ".swiper-button-prev",
 //               nextEl: ".swiper-button-next",
@@ -49,14 +50,17 @@
 //             }}
 //             loop={true}
 //             breakpoints={{
+//               // For screens up to 640px (mobile)
 //               640: {
-//                 slidesPerView: 3,
+//                 slidesPerView: 2, // Show 2 items per view on mobile screens
 //               },
+//               // For tablets (screens up to 768px)
 //               768: {
-//                 slidesPerView: 4,
+//                 slidesPerView: 3, // Show 3 items per view on tablets
 //               },
+//               // For larger screens (1024px and up)
 //               1024: {
-//                 slidesPerView: 5,
+//                 slidesPerView: 4, // Show 4 items per view on larger screens
 //               },
 //             }}
 //           >
@@ -73,28 +77,6 @@
 //               </SwiperSlide>
 //             ))}
 //           </Swiper>
-
-//           {/* Navigation Arrows */}
-//           {/* <div className="swiper-button-prev">
-//             <svg
-//               aria-hidden="true"
-//               className="e-font-icon-svg e-eicon-chevron-left"
-//               viewBox="0 0 1000 1000"
-//               xmlns="http://www.w3.org/2000/svg"
-//             >
-//               <path d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z"></path>
-//             </svg>
-//           </div> */}
-//           {/* <div className="swiper-button-next">
-//             <svg
-//               aria-hidden="true"
-//               className="e-font-icon-svg e-eicon-chevron-right"
-//               viewBox="0 0 1000 1000"
-//               xmlns="http://www.w3.org/2000/svg"
-//             >
-//               <path d="M696 533C708 521 713 504 713 487 713 471 708 454 696 446L400 146C388 133 375 125 354 125 338 125 325 129 313 142 300 154 292 171 292 187 292 204 296 221 308 233L563 492 304 771C292 783 288 800 288 817 288 833 296 850 308 863 321 871 338 875 354 875 371 875 388 867 400 854L696 533Z"></path>
-//             </svg>
-//           </div> */}
 //         </div>
 //       </div>
 //     </section>
@@ -129,21 +111,21 @@ const CompaniesCarousel = () => {
   ];
 
   return (
-    <section className="elementor-section elementor-top-section flex justify-center items-center my-32">
-      <div className="elementor-container elementor-column-gap-default max-w-6xl">
+    <section className="elementor-section elementor-top-section flex justify-center items-center my-16 md:my-32 px-4">
+      <div className="elementor-container elementor-column-gap-default max-w-6xl w-full">
         {/* Heading */}
         <div className="elementor-column elementor-col-100">
-          <h3 className="elementor-heading-title text-center text-2xl font-medium mb-8">
+          <h3 className="elementor-heading-title text-center text-xl md:text-2xl font-medium mb-6 md:mb-8">
             Companies They Work At:
           </h3>
         </div>
 
         {/* Carousel */}
-        <div className="elementor-column elementor-col-100">
+        <div className="elementor-column elementor-col-100 relative">
           <Swiper
             modules={[Navigation, Autoplay]}
-            spaceBetween={30}
-            slidesPerView={3} // Default for large screens
+            spaceBetween={20} // Reduced on mobile
+            slidesPerView={3}
             navigation={{
               prevEl: ".swiper-button-prev",
               nextEl: ".swiper-button-next",
@@ -154,33 +136,41 @@ const CompaniesCarousel = () => {
             }}
             loop={true}
             breakpoints={{
-              // For screens up to 640px (mobile)
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 15
+              },
               640: {
-                slidesPerView: 2, // Show 2 items per view on mobile screens
+                slidesPerView: 2,
+                spaceBetween: 20
               },
-              // For tablets (screens up to 768px)
               768: {
-                slidesPerView: 3, // Show 3 items per view on tablets
+                slidesPerView: 3,
+                spaceBetween: 25
               },
-              // For larger screens (1024px and up)
               1024: {
-                slidesPerView: 4, // Show 4 items per view on larger screens
+                slidesPerView: 4,
+                spaceBetween: 30
               },
             }}
           >
             {companies.map((company, index) => (
               <SwiperSlide key={index}>
-                <figure className="flex justify-center items-center">
+                <figure className="flex justify-center items-center p-2">
                   <img
                     src={company.logo}
                     alt={company.name}
-                    className="w-24 h-24 object-contain"
+                    className="w-20 h-20 md:w-24 md:h-24 object-contain" // Smaller on mobile
                     loading="lazy"
                   />
                 </figure>
               </SwiperSlide>
             ))}
           </Swiper>
+          
+          {/* Navigation buttons with larger touch area for mobile */}
+          <div className="swiper-button-prev !w-10 !h-10 !mt-0 !-left-2 md:!-left-4 after:!text-sm md:after:!text-base"></div>
+          <div className="swiper-button-next !w-10 !h-10 !mt-0 !-right-2 md:!-right-4 after:!text-sm md:after:!text-base"></div>
         </div>
       </div>
     </section>

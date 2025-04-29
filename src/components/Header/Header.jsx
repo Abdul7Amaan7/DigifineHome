@@ -131,6 +131,7 @@ const searchOptions = [
 ];
 
 const recentSearches = [
+  { name: 'MBA in Digital Marketing', slug: '/courses/digitalmarketing/mba' },
   { name: 'React JS', slug: '/courses/react' },
   { name: 'Data Structures', slug: '/courses/data-structures' },
   { name: 'MERN Stack', slug: '/courses/mern' },
